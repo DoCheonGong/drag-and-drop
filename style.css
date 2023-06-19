@@ -1,0 +1,98 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Orbit&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #eff2f5;
+}
+
+#main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#left,
+#right {
+    width: 120px;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    border-radius: 10px;
+    box-shadow: -5px -5px 9px #fffb, 5px 5px 9px #5673;
+}
+
+.list {
+    margin: 10px 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    box-shadow: -5px -5px 9px #fffb, 5px 5px 9px #5673;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+}
+
+.list>span {
+    font: bold 15px/1 "orbit";
+}
+
+.wrap {
+    flex: 1;
+    width: 100%;
+    height: 100vh;
+    border-left: 3px solid #0001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    position: relative;
+}
+
+.wrap>div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    transition: 0.7s;
+    transform: scale(0);
+    width: 100%;
+    height: 100%;
+    min-height: 520px;
+    border-radius: 15px;
+    box-shadow: -5px -5px 9px #fffb, 5px 5px 9px #5673;
+}
+
+.wrap div.on {
+    z-index: 3;
+    transform: scale(1);
+}
